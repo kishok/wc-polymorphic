@@ -15,11 +15,17 @@
     import { html, render } from 'lit-html';
     import '../dist/wc-polymorphic.js';
 
-    const title = 'Hello owc World!';
+    const target =  {
+      id : "sample-one",
+      context : {
+         message: 'hi polymorphic',
+         value: 1946
+      }
+    }
+
     render(
       html`
-        <wc-polymorphic .title=${title}>
-          some more light-dom
+        <wc-polymorphic .template="${target}">
         </wc-polymorphic>
       `,
       document.querySelector('#demo')
